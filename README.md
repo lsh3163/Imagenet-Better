@@ -40,14 +40,14 @@ BATCH_SIZE = NUM_GPUS * BS_PER*GPU
 # Result
 ## Paper
 The higher the accuracy in ImageNet, the higher the performance in transfer learning.
-| Dataset | Metric |
-|--|--|
-|`food101`  |top-1  |
-|`cifar10`  |  top-1|
-|`cifar100`  |  top-1|
-|`sun397`  |  top-1|
-|`oxford_flowers102`  | mean acc |
-|`caltech101`  |mean acc |
+| Dataset | Metric |Classes|Size(train/test)|
+|--|--|--|--|
+|`food101`  |top-1  |101|75750/255250|
+|`cifar10`  |  top-1|10|50000/10000|
+|`cifar100`  |  top-1|100|50000/10000|
+|`sun397`  |  top-1|397|19850/19850|
+|`oxford_flowers102`  | mean acc |102|2040/6149|
+|`caltech101`  |mean acc |102|3060/6084|
 
 ### Task 1. Logistic Regression.
 | Dataset | mobilenet v1 |mobilenet v2|
@@ -82,17 +82,18 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| **0.8257** |0.8164  |- |- |
+|`cifar10`  | - |-| **0.8257** |0.8164  |**0.7788**|0.7635 |
 |`cifar100`  | - |-| - |-  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
-|`caltech101`  | - |-| - |-  |- |- |
+|`caltech101`  | - |-| 0.8664 |-  |- |- |
+
 ### Statistical Methods - log odds
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| **1.5554** |1.4921  |- |- |
+|`cifar10`  | - |-| **1.5554** |1.4921  |**1.2586** |1.1719|
 |`cifar100`  | - |-| - |-  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
-|`caltech101`  | - |-| - |-  |- |- |
+|`caltech101`  | - |-| 1.8694 |-  |- |- |
