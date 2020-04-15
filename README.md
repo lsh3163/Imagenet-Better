@@ -78,7 +78,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`caltech101`  | |win!|
 
 ## My Result.
-### Mobilenet v1 vs v2
+### Mobilenet v1 vs v2 - acc
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
@@ -87,12 +87,13 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| - |-  |- |- |
-### Statistical Method
+### Statistical Methods - log odds
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| 0.8257 |-  |- |- |
+|`cifar10`  | - |-| 1.5554 |-  |- |- |
 |`cifar100`  | - |-| - |-  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| - |-  |- |- |
+
