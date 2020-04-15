@@ -31,11 +31,11 @@ You need to change the parameters according to the data set in main.py. (NUM_TRA
 
 BATCH_SIZE = NUM_GPUS * BS_PER*GPU
 
-## Model property
+## Model Summary
 |  |  Parameter| Features|Image Size|Top-1acc|
 |--|--|--|--|--|
-| `MobileNet v1` |3.2M|1024|224|70.6|
-|`MobileNet v2`|2.2M|1280|224|**72.0**|
+| `MobileNet v1` |3.2M|1024|224|**72.4**|
+|`MobileNet v2`|2.2M|1280|224|71.6|
 
 # Result
 ## Paper
@@ -55,34 +55,34 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`food101`  |  |win!|
 |`cifar10`  |  |win!|
 |`cifar100`  |  win!||
-|`sun397`  | |win!|
-|`oxford_flowers102`  | |win!|
-|`caltech101`  |win! ||
+|`sun397`  | win!||
+|`oxford_flowers102`  | win!||
+|`caltech101`  | |win!|
 ### Task 2. Fine-Tuned
 | Dataset | mobilenet v1 |mobilenet v2|
 |--|--|--|
-|`food101`  |  |win!|
-|`cifar10`  |  |win!|
-|`cifar100`  |  |win!|
-|`sun397`  | |win!|
-|`oxford_flowers102`  | |win!|
-|`caltech101`  | |win!|
+|`food101`  |win!  ||
+|`cifar10`  | win! ||
+|`cifar100`  | win! ||
+|`sun397`  | win!||
+|`oxford_flowers102`  | win!||
+|`caltech101`  |win! ||
 ### Task 3. Trained from Random Initialization
 | Dataset | mobilenet v1 |mobilenet v2|
 |--|--|--|
-|`food101`  |  |win!|
-|`cifar10`  |  |win!|
-|`cifar100`  |  |win!|
-|`sun397`  | |win!|
-|`oxford_flowers102`  | |win!|
-|`caltech101`  | |win!|
+|`food101`  |win!  ||
+|`cifar10`  |  win!||
+|`cifar100`  | win! ||
+|`sun397`  |win! ||
+|`oxford_flowers102`  |win! ||
+|`caltech101`  |win! ||
 
 ## My Result.
 ### Mobilenet v1 vs v2 - acc
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| 0.8257 |-  |- |- |
+|`cifar10`  | - |-| **0.8257** |0.8164  |- |- |
 |`cifar100`  | - |-| - |-  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
@@ -91,9 +91,8 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| 1.5554 |-  |- |- |
+|`cifar10`  | - |-| **1.5554** |1.4921  |- |- |
 |`cifar100`  | - |-| - |-  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| - |-  |- |- |
-
