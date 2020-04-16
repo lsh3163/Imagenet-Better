@@ -78,12 +78,22 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`caltech101`  |win! ||
 
 ## My Result.
+
+### Setting
+- [ ] Dropout
+- [ ] Data Augmentation
+- [x] Optimizer - Adam 
+- [x] Batchsize - 256 
+- [x] Image Size - 224 x 224
+- [x] Epoch : 80~100 (10000 iterations)  
+
+
 ### Mobilenet v1 vs v2 - acc
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
 |`cifar10`  | - |-| **0.8257** |0.8164  |**0.7788**|0.7635 |
-|`cifar100`  | - |-| - |-  |- |- |
+|`cifar100`  | - |-| **0.5752** |0.5414  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| 0.8664 |-  |- |- |
@@ -93,7 +103,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |--|--|--|--|--|--|--|
 |`food101`  | - |-| - |-  |- |- |
 |`cifar10`  | - |-| **1.5554** |1.4921  |**1.2586** |1.1719|
-|`cifar100`  | - |-| - |-  |- |- |
+|`cifar100`  | - |-| **0.3030** |0.1659  |- |- |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| 1.8694 |-  |- |- |
