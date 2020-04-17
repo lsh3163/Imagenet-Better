@@ -17,25 +17,22 @@ You can install  **tensorflow-gpu & datasets!**
 
 ## Parameter Setting
   
-You need to change the parameters according to the data set in main.py. (NUM_TRAIN_SAMPLES, IMG_SHAPE, NUM_CLASSES). You can use 2 models & 6 datasets in this implementation or more.
+You need to change the parameters according to the data set in main.py or Implementation.ipynb. (NUM_TRAIN_SAMPLES, IMG_SHAPE, NUM_CLASSES). You can use 2 models & 6 datasets in this implementation or more.
 
-    NUM_GPUS = 2
-    BS_PER_GPU = 8
-    NUM_EPOCHS = 80
-    NUM_TRAIN_SAMPLES = 50000
-    TASK=2
-    MODEL = "mobilenet_v1" # mobilenet_v1, mobilenet_v2
-    IMG_SHAPE = (32, 32, 3)
-    NUM_CLASSES = 10
-    DATASET = "cifar10" # food101, cifar10, cifar100, sun397, oxford_flowers102, caltech101
+    NUM_GPUS = 4
+    BS_PER_GPU = 64  # Batchsize = 4x64
+    NUM_EPOCHS = 200
+    TASK=2  # Task 1 : Logistic Regression, Task2 : Transfer learning, Task3 : Random Initialization(Scratch Training)
+    MODEL = "mobilenet_v2"  # mobilenet_v1, mobilenet_v2
+    DATASET = "cifar10"  # food101, cifar10, cifar100, sun397, oxford_flowers102, caltech101
+    learning_rate = 0.01
 
-BATCH_SIZE = NUM_GPUS * BS_PER*GPU
 
 ## Model Summary
-|  |  Parameter| Features|Image Size|Top-1acc|
-|--|--|--|--|--|
-| `MobileNet v1` |3.2M|1024|224|**72.4**|
-|`MobileNet v2`|2.2M|1280|224|71.6|
+|  |  Parameter| Features|Image Size|Top-1acc / Retrained|Top-1acc / Paper |
+|--|--|--|--|--|--|
+| `MobileNet v1` |3.2M|1024|224|**72.4**|70.4
+|`MobileNet v2`|2.2M|1280|224|71.6|**72.0**
 
 # Result
 ## Paper
@@ -80,12 +77,13 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 ## My Result.
 
 ### Setting
+- [x] Preprocessing - (Scale to [-1, 1])
 - [ ] Dropout
 - [ ] Data Augmentation
-- [x] Optimizer - SGD (Momentum 0.9, Nestrov True, No Weight Decay)
+- [x] Optimizer - SGD (Momentum 0.9, Nestrov True, Weight Decay 1e-6)
 - [x] Batchsize - 256 
 - [x] Image Size - 224 x 224 (except cifar10, 100 - 32 x 32)
-- [x] Epoch : 80~100 (10000 iterations)  
+- [x] Epoch : 200 (~10000 iterations)  
  
 ### Mobilenet v1 vs v2 - acc
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
@@ -95,7 +93,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`cifar100`  | 0.0561 |**0.0936**| **0.5752** |0.5414  |0.2661 |**0.2861** |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| **0.5572** |0.5250  |- |- |
-|`caltech101`  | - |-| **0.8664** |0.8616  |0.4018 |- |
+|`caltech101`  | - |-| **0.8664** |0.8616  |0.5303 |**0.5408** |
 
 ### Statistical Methods - log odds
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
@@ -105,4 +103,4 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`cifar100`  | -2.8224 |**-2.2704**| **0.3030** |0.1659  |-1.0145 |**-0.9144** |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| **0.2298** |0.1000  |- |- |
-|`caltech101`  | - |-| **1.8694** |1.8286  |-0.3979 |- |
+|`caltech101`  | - |-| **1.8694** |1.8286  |0.1213 |**0.1635** |
