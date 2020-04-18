@@ -75,8 +75,9 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`caltech101`  |win! ||
 
 ## My Result.
+### 1. Tensorflow 2.0
 
-### Setting
+#### Setting
 - [x] Preprocessing - (Scale to [-1, 1])
 - [ ] Dropout
 - [ ] Data Augmentation
@@ -85,7 +86,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 - [x] Image Size - 224 x 224 (except cifar10, 100 - 32 x 32)
 - [x] Epoch : 200 (~10000 iterations)  
  
-### Mobilenet v1 vs v2 - acc
+#### Mobilenet v1 vs v2 - acc
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |`food101`  | - |-| - |-  |- |- |
@@ -95,7 +96,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`oxford_flowers102`  | - |-| **0.5572** |0.5250  |- |- |
 |`caltech101`  | - |-| **0.8664** |0.8616  |0.5303 |**0.5408** |
 
-### Statistical Methods - log odds
+#### Statistical Methods - log odds
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |`food101`  | - |-| - |-  |- |- |
@@ -104,3 +105,33 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| **0.2298** |0.1000  |- |- |
 |`caltech101`  | - |-| **1.8694** |1.8286  |0.1213 |**0.1635** |
+
+### 2. Pytorch
+#### Setting
+- [x] Preprocessing - (Scale to [0, 1])
+- [ ] Dropout
+- [ ] Data Augmentation
+- [x] Optimizer - SGD (Momentum 0.9, Nestrov True, Weight Decay 1e-6)
+- [x] Batchsize - 128 
+- [x] Image Size - 224 x 224 
+- [x] Epoch : 100 (~10000 iterations)  
+ 
+#### Mobilenet v1 vs v2 - acc
+| Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|`food101`  | - |-| - |-  |- |- |
+|`cifar10`  | - |-| - |-  |0.8910 |- |
+|`cifar100`  | - |-| - |-  |- |- |
+|`sun397`  | - |-| - |-  |- |- |
+|`oxford_flowers102`  | - |-| - |-  |- |- |
+|`caltech101`  | - |-| - |-  |- |- |
+
+#### Statistical Methods - log odds
+| Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
+|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+|`food101`  | - |-| - |-  |- |- |
+|`cifar10`  | - |-| - |-  |2.100 |- |
+|`cifar100`  | - |-| - |-  |- |- |
+|`sun397`  | - |-| - |-  |- |- |
+|`oxford_flowers102`  | - |-| - |-  |- |- |
+|`caltech101`  | - |-| - |-  |- |- |
