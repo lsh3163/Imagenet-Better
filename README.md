@@ -121,7 +121,7 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |`food101`  | - |-| - |-  |- |- |
 |`cifar10`  | - |-| - |0.9200  |**0.8910** |0.8670 |
-|`cifar100`  | - |-| - |-  |0.6600 |**0.7100** |
+|`cifar100`  | - |-| - |0.8800|0.6600 |**0.7100** |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| - |-  |- |- |
