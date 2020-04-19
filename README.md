@@ -120,8 +120,8 @@ The higher the accuracy in ImageNet, the higher the performance in transfer lear
 | Dataset | Task1 v1 |Task1 v2|Task2 v1 |Task2 v2|Task3 v1 |Task3 v2|
 |:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 |`food101`  | - |-| - |-  |- |- |
-|`cifar10`  | - |-| - |0.9200  |**0.8910** |0.867 |
-|`cifar100`  | - |-| - |-  |- |- |
+|`cifar10`  | - |-| - |0.9200  |**0.8910** |0.8670 |
+|`cifar100`  | - |-| - |-  |- |0.7100 |
 |`sun397`  | - |-| - |-  |- |- |
 |`oxford_flowers102`  | - |-| - |-  |- |- |
 |`caltech101`  | - |-| - |-  |- |- |
